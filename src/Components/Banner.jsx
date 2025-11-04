@@ -5,7 +5,7 @@ import bannerImg from "../assets/hero.png";
 
 const Banner = () => {
     return (
-        <section className="w-full bg-[#f8f5f5]">
+        <section className="w-full bg-[#f8f5f5] pb-10">
             {/* Main Banner Section */}
             <div className="max-w-7xl mx-auto px-6 md:px-16 py-12 flex flex-col items-center gap-8">
 

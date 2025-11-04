@@ -11,6 +11,7 @@ const router = createBrowserRouter([
             {
                 index: true,
                 Component: HomePage,
+                loader: () => fetch("/trending-apps.json"),
             }
         ]
     }

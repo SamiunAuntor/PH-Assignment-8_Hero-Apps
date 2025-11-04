@@ -1,0 +1,266 @@
+[
+    {
+        "image": "https://i.ibb.co.com/QFpmwpr3/youtube.png",
+        "title": "YouTube",
+        "companyName": "Google LLC",
+        "id": 1,
+        "description": "Watch, upload, and share videos across the world. Enjoy music, gaming, and vlogs anytime.",
+        "size": 180,
+        "reviews": 154000000,
+        "ratingAvg": 4.5,
+        "downloads": 10000000000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 1200000
+            },
+            {
+                "name": "2 star",
+                "count": 2200000
+            },
+            {
+                "name": "3 star",
+                "count": 7500000
+            },
+            {
+                "name": "4 star",
+                "count": 22000000
+            },
+            {
+                "name": "5 star",
+                "count": 123000000
+            }
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/mV7bw1Rc/Pngtree-instagram-icon-8704817.png",
+        "title": "Instagram",
+        "companyName": "Meta Platforms, Inc.",
+        "id": 2,
+        "description": "Share photos and videos, connect with friends, and explore trending content worldwide.",
+        "size": 140,
+        "reviews": 135000000,
+        "ratingAvg": 4.4,
+        "downloads": 10000000000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 1600000
+            },
+            {
+                "name": "2 star",
+                "count": 2400000
+            },
+            {
+                "name": "3 star",
+                "count": 8400000
+            },
+            {
+                "name": "4 star",
+                "count": 26000000
+            },
+            {
+                "name": "5 star",
+                "count": 97000000
+            }
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/5hcgXBtN/spotify.png",
+        "title": "Spotify",
+        "companyName": "Spotify AB",
+        "id": 3,
+        "description": "Stream millions of songs and podcasts. Discover new artists and playlists daily.",
+        "size": 120,
+        "reviews": 115000000,
+        "ratingAvg": 4.6,
+        "downloads": 1000000000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 900000
+            },
+            {
+                "name": "2 star",
+                "count": 1800000
+            },
+            {
+                "name": "3 star",
+                "count": 6500000
+            },
+            {
+                "name": "4 star",
+                "count": 20000000
+            },
+            {
+                "name": "5 star",
+                "count": 87000000
+            }
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/spHvkMH7/tiktok.jpg",
+        "title": "TikTok",
+        "companyName": "ByteDance Ltd.",
+        "id": 4,
+        "description": "Create, share, and watch short-form videos that entertain and inspire millions globally.",
+        "size": 150,
+        "reviews": 118000000,
+        "ratingAvg": 4.3,
+        "downloads": 5000000000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 2000000
+            },
+            {
+                "name": "2 star",
+                "count": 3000000
+            },
+            {
+                "name": "3 star",
+                "count": 8000000
+            },
+            {
+                "name": "4 star",
+                "count": 25000000
+            },
+            {
+                "name": "5 star",
+                "count": 80000000
+            }
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/XxZcLLpG/google-photos.png",
+        "title": "Google Photos",
+        "companyName": "Google LLC",
+        "id": 5,
+        "description": "Backup, organize, and share your photos and videos with smart cloud storage and AI.",
+        "size": 110,
+        "reviews": 82000000,
+        "ratingAvg": 4.5,
+        "downloads": 5000000000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 800000
+            },
+            {
+                "name": "2 star",
+                "count": 1300000
+            },
+            {
+                "name": "3 star",
+                "count": 4200000
+            },
+            {
+                "name": "4 star",
+                "count": 12000000
+            },
+            {
+                "name": "5 star",
+                "count": 63000000
+            }
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/9HM755PF/whats-app.png",
+        "title": "WhatsApp",
+        "companyName": "Meta Platforms, Inc.",
+        "id": 6,
+        "description": "Simple, secure messaging and calling for free, available on phones worldwide.",
+        "size": 95,
+        "reviews": 160000000,
+        "ratingAvg": 4.4,
+        "downloads": 10000000000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 1300000
+            },
+            {
+                "name": "2 star",
+                "count": 1900000
+            },
+            {
+                "name": "3 star",
+                "count": 7100000
+            },
+            {
+                "name": "4 star",
+                "count": 21000000
+            },
+            {
+                "name": "5 star",
+                "count": 128000000
+            }
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/KzXf66QH/facebook.png",
+        "title": "Facebook",
+        "companyName": "Meta Platforms, Inc.",
+        "id": 7,
+        "description": "Connect with friends, share memories, and stay updated on what's happening around you.",
+        "size": 160,
+        "reviews": 198000000,
+        "ratingAvg": 4.2,
+        "downloads": 10000000000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 2700000
+            },
+            {
+                "name": "2 star",
+                "count": 4000000
+            },
+            {
+                "name": "3 star",
+                "count": 8800000
+            },
+            {
+                "name": "4 star",
+                "count": 22000000
+            },
+            {
+                "name": "5 star",
+                "count": 160000000
+            }
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/bR8knQqM/gmail.jpg",
+        "title": "Gmail",
+        "companyName": "Google LLC",
+        "id": 8,
+        "description": "Reliable and secure email service from Google with spam protection and easy organization.",
+        "size": 130,
+        "reviews": 92000000,
+        "ratingAvg": 4.6,
+        "downloads": 10000000000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 700000
+            },
+            {
+                "name": "2 star",
+                "count": 900000
+            },
+            {
+                "name": "3 star",
+                "count": 3200000
+            },
+            {
+                "name": "4 star",
+                "count": 11000000
+            },
+            {
+                "name": "5 star",
+                "count": 77000000
+            }
+        ]
+    }
+]
