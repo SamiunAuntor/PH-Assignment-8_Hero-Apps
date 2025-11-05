@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Banner from '../Components/Banner';
 import TrendingApps from '../Components/TrendingApps';
+import Loader from '../Components/Loader/Loader';
 
 const HomePage = () => {
     return (
         <div>
-            <Banner></Banner>
-            <TrendingApps></TrendingApps>
+            <Banner />
+            <TrendingApps />
         </div>
     );
 };

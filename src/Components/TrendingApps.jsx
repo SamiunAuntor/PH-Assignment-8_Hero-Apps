@@ -6,8 +6,6 @@ import { useLoaderData } from "react-router";
 const TrendingApps = () => {
     const apps = useLoaderData();
 
-    if (!apps) return <Loader />;
-
     return (
         <section className="w-full bg-[#f8f5f5] py-12 flex justify-center">
             <div className="w-11/12">
