@@ -3,6 +3,7 @@ import MainLayout from "./Layouts/MainLayout";
 import HomePage from "./Pages/HomePage";
 import ErrorPage from "./Pages/ErrorPage";
 import Apps from "./Pages/Apps";
+import AppDeatilsPage from "./Pages/AppDeatilsPage";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
             {
                 path: "/apps",
                 Component: Apps,
+                loader: () => fetch("/Apps.json"),
+            },
+            {
+                path: "/apps/:id",
+                Component: AppDeatilsPage,
                 loader: () => fetch("/Apps.json"),
             },
             {

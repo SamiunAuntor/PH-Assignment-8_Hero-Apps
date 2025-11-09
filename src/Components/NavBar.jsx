@@ -51,9 +51,27 @@ const NavBar = () => {
             {/* Mobile Menu */}
             {menuOpen && (
                 <div className="md:hidden flex flex-col items-center text-center space-y-4 px-6 pb-6 pt-2 text-gray-700 font-medium border-t border-gray-200 animate-fadeIn">
-                    <li className="list-none hover:text-[#632EE3] cursor-pointer transition">Home</li>
-                    <li className="list-none hover:text-[#632EE3] cursor-pointer transition">Apps</li>
-                    <li className="list-none hover:text-[#632EE3] cursor-pointer transition">Installation</li>
+                    <NavLink
+                        to={`/`}
+                        className="hover:text-[#632EE3] transition"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Home
+                    </NavLink>
+                    <NavLink
+                        to={`/apps`}
+                        className="hover:text-[#632EE3] transition"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Apps
+                    </NavLink>
+                    <NavLink
+                        to={`/installation`}
+                        className="hover:text-[#632EE3] transition"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Installation
+                    </NavLink>
 
                     <a
                         href="https://github.com/SamiunAuntor"

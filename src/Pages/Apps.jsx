@@ -28,7 +28,7 @@ const Apps = () => {
             {/* Top Bar */}
             <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
                 {/* App count */}
-                <p className="text-[#627382] font-medium">
+                <p className="text-[24px] font-medium">
                     ({filteredApps.length}) apps found
                 </p>
 

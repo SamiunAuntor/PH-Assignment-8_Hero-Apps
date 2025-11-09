@@ -82,7 +82,7 @@ const Banner = () => {
                         {/* Column 3 */}
                         <div>
                             <p className="text-lg mt-1">Active Apps</p>
-                            <p className="text-4xl md:text-5xl font-bold">132+</p>
+                            <p className="text-4xl md:text-5xl font-bold">40+</p>
                             <p className="mt-1 text-sm opacity-80">31 more will launch</p>
                         </div>
                     </div>

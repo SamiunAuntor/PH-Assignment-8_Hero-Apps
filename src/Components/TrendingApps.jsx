@@ -1,7 +1,7 @@
 import React from "react";
 import AppCard from "./AppCard";
 import Loader from "./Loader/Loader";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 
 const TrendingApps = () => {
     const apps = useLoaderData();
@@ -30,13 +30,14 @@ const TrendingApps = () => {
 
                 {/* Bottom Button */}
                 <div className="flex justify-center mt-10">
-                    <button
+                    <Link
+                        to="/apps"
                         className="px-6 py-3 text-white font-semibold rounded-lg 
                        bg-gradient-to-r from-[#632EE3] to-[#9F62F2] 
                        hover:opacity-90 transition-all duration-300 shadow-md"
                     >
                         Show All
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>

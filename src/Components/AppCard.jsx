@@ -1,9 +1,15 @@
 import React from 'react';
 import { Download, Star } from 'lucide-react';
+import { useNavigate } from 'react-router';
 
 const AppCard = ({ app }) => {
+
+    const navigate = useNavigate();
+
     return (
-        <div className="w-full bg-white rounded-xl overflow-hidden shadow-md p-4 flex flex-col h-full">
+        <div
+            onClick={() => navigate(`/apps/${app.id}`)}
+            className="w-full bg-white rounded-xl overflow-hidden shadow-md p-4 flex flex-col h-full">
 
             {/* Top Image */}
             <div className="w-full aspect-square">
