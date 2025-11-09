@@ -1,8 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import downloadIcon from "../assets/icon-downloads.png";
 import ratingIcon from "../assets/icon-ratings.png";
 import reviewIcon from "../assets/icon-review.png";
 
+// Chart.js imports
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+
+// Register Chart.js modules
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const AppDetails = ({ app }) => {
 
@@ -18,14 +32,23 @@ const AppDetails = ({ app }) => {
     } = app;
 
     const [installed, setInstalled] = useState(false);
+    const chartRef = useRef(null);
 
     useEffect(() => {
         const installedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
         if (installedApps.includes(title)) {
             setInstalled(true);
         }
-    }, [title]);
 
+        const handleResize = () => {
+            if (chartRef.current) {
+                chartRef.current.chartInstance?.update();
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [title]);
 
     const handleInstall = () => {
         setInstalled(true);
@@ -37,15 +60,42 @@ const AppDetails = ({ app }) => {
         }
     };
 
-
-
-
-
     const formatCompact = (num) => {
         if (num >= 1000000000) return `${(num / 1000000000).toFixed(0)}B`;
         if (num >= 1000000) return `${(num / 1000000).toFixed(0)}M`;
         if (num >= 1000) return `${(num / 1000).toFixed(0)}K`;
         return `${num}`;
+    };
+
+    // Chart data
+    const chartData = {
+        labels: [...app.ratings].reverse().map(r => r.name),
+        datasets: [
+            {
+                label: 'Number of Ratings',
+                data: [...app.ratings].reverse().map(r => r.count),
+                backgroundColor: '#FF8811',
+                barThickness: 20,
+            },
+        ],
+    };
+
+    const chartOptions = {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false },
+            title: { display: false },
+        },
+        scales: {
+            x: {
+                ticks: { beginAtZero: true }
+            },
+            y: {
+                ticks: { autoSkip: false }
+            }
+        }
     };
 
     return (
@@ -138,7 +188,9 @@ const AppDetails = ({ app }) => {
                 <h2 className="text-[18px] font-semibold text-[#001931] mb-4">
                     Ratings
                 </h2>
-                <p className="italic text-[#627382] py-6">it will be implemented later</p>
+                <div className="w-full h-[250px] md:h-[200px]">
+                    <Bar ref={chartRef} data={chartData} options={chartOptions} />
+                </div>
             </div>
 
             {/* Underline */}
