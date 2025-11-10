@@ -31,6 +31,7 @@ Hero Apps is a single-page application (SPA) built with React that simulates an 
   - Detailed description
   - Install/Uninstall functionality
 - **Installation Page**: Manage your installed apps collection
+- **Toast Notifications**: Success notifications when apps are installed or uninstalled
 - **Responsive Design**: Fully responsive layout for mobile, tablet, and desktop
 - **Local Storage**: Persistent app installation state using browser localStorage
 - **Loading States**: Smooth loading indicators during data fetching
@@ -54,6 +55,7 @@ Hero Apps is a single-page application (SPA) built with React that simulates an 
 
 ### Icons & UI
 - **Lucide React 0.552.0** - Beautiful icon library
+- **react-hot-toast 2.6.0** - Toast notification library for user feedback
 
 ### Development Tools
 - **ESLint** - Code linting and quality assurance
@@ -140,6 +142,8 @@ Hero Apps/
 │   │   ├── InstallationCard.jsx # Installation card component
 │   │   ├── Loading.jsx        # Loading component
 │   │   ├── Loader/            # Loader component (alternative)
+│   │   │   ├── Loader.jsx     # Loader component
+│   │   │   └── Loader.css     # Loader styles
 │   │   ├── NavBar.jsx         # Navigation bar
 │   │   └── TrendingApps.jsx   # Trending apps section
 │   ├── Layouts/
@@ -173,6 +177,8 @@ Hero Apps/
 - Uses browser `localStorage` to persist installed apps
 - Apps can be installed/uninstalled from the app details page
 - Installation page displays all installed apps with sorting options
+- Toast notifications provide user feedback on install/uninstall actions
+- Real-time UI updates without page reload when apps are uninstalled
 
 ### Data Visualization
 - Interactive horizontal bar chart showing rating distribution (1-5 stars)
@@ -188,6 +194,13 @@ Hero Apps/
 - Breakpoints for mobile, tablet, and desktop
 - Hamburger menu for mobile navigation
 - Adaptive grid layouts
+
+### Toast Notifications
+- Success notifications using react-hot-toast
+- Toast messages appear in top-right corner
+- Auto-dismiss after 3 seconds
+- Custom styling with app theme colors
+- Notifications for app installation and uninstallation actions
 
 ## 💾 Data Management
 

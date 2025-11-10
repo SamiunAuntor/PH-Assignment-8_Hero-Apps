@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import InstallationCard from '../Components/InstallationCard';
 import { useLoaderData } from 'react-router';
 
@@ -7,11 +7,25 @@ const InstallationPage = () => {
     const [installedApps, setInstalledApps] = useState([]);
     const [sortBy, setSortBy] = useState("default");
 
-    useEffect(() => {
+    const updateInstalledApps = useCallback(() => {
         const stored = JSON.parse(localStorage.getItem("installedApps")) || [];
         const filtered = appsData.filter(app => stored.includes(app.title));
         setInstalledApps(filtered);
     }, [appsData]);
+
+    useEffect(() => {
+        updateInstalledApps();
+
+        const handleStorageChange = () => {
+            updateInstalledApps();
+        };
+
+        window.addEventListener("storage", handleStorageChange);
+
+        return () => {
+            window.removeEventListener("storage", handleStorageChange);
+        };
+    }, [updateInstalledApps]);
 
     const sortedApps = [...installedApps].sort((a, b) => {
         if (sortBy === "size-asc") return a.size - b.size;
@@ -56,7 +70,11 @@ const InstallationPage = () => {
             <div className="space-y-4">
                 {sortedApps.length > 0 ? (
                     sortedApps.map((app) => (
-                        <InstallationCard key={app.id} app={app} />
+                        <InstallationCard 
+                            key={app.id} 
+                            app={app} 
+                            onUninstall={updateInstalledApps}
+                        />
                     ))
                 ) : (
                     <p className="text-center text-gray-500 py-20 text-lg">

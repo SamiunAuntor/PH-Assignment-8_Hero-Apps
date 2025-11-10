@@ -1,16 +1,30 @@
 import React from 'react';
 import star from "../assets/icon-ratings.png";
 import download from "../assets/icon-downloads.png";
+import { toast } from "react-hot-toast";
 
-const InstallationCard = ({ app }) => {
+const InstallationCard = ({ app, onUninstall }) => {
     const { image, title, downloads, ratingAvg, size } = app;
 
     const handleUninstall = () => {
         const stored = JSON.parse(localStorage.getItem("installedApps")) || [];
         const updated = stored.filter(name => name !== title);
         localStorage.setItem("installedApps", JSON.stringify(updated));
-        window.location.reload();
+
+        // Show success toast
+        toast.success(`${title} uninstalled successfully!`, {
+            duration: 3000,
+        });
+
+        // Trigger storage event for other components
+        window.dispatchEvent(new Event("storage"));
+
+        // Notify parent component to update the list
+        if (onUninstall) {
+            onUninstall();
+        }
     };
+
 
     const formatCompact = (num) => {
         if (num >= 1000000000) return `${(num / 1000000000).toFixed(0)}B`;

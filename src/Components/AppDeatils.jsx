@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import downloadIcon from "../assets/icon-downloads.png";
 import ratingIcon from "../assets/icon-ratings.png";
 import reviewIcon from "../assets/icon-review.png";
+import { toast } from "react-hot-toast";
 
 // Chart.js imports
 import {
@@ -68,6 +69,11 @@ const AppDetails = ({ app }) => {
         if (!installedApps.includes(title)) {
             installedApps.push(title);
             localStorage.setItem("installedApps", JSON.stringify(installedApps));
+
+            // Show success toast
+            toast.success(`${title} installed successfully!`, {
+                duration: 3000,
+            });
 
             // manually trigger the event for instant update
             window.dispatchEvent(new Event("storage"));
