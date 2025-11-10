@@ -2,18 +2,26 @@
 
 A modern, responsive web application that showcases a collection of popular mobile and web applications. Browse trending apps, view detailed information, ratings, reviews, and manage your installed apps collection.
 
+## 🌐 Live Demo
+
+**🔗 [View Live Application](https://hero-apps-dax.pages.dev/)**
+
+**📦 [GitHub Repository](https://github.com/SamiunAuntor/PH-Assignment-8_Hero-Apps.git)**
+
 ## 📋 Table of Contents
 
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Running the Project](#running-the-project)
-- [Project Structure](#project-structure)
-- [Key Features](#key-features)
-- [Data Management](#data-management)
-- [Contributing](#contributing)
+- [Live Demo](#-live-demo)
+- [Project Overview](#-project-overview)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation)
+- [Running the Project](#-running-the-project)
+- [Project Structure](#-project-structure)
+- [Key Features](#-key-features)
+- [Data Management](#-data-management)
+- [Deployment](#-deployment)
+- [Contributing](#-contributing)
 
 ## 🎯 Project Overview
 
@@ -73,8 +81,8 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd "Hero Apps"
+   git clone https://github.com/SamiunAuntor/PH-Assignment-8_Hero-Apps.git
+   cd PH-Assignment-8_Hero-Apps
    ```
 
 2. **Install dependencies**
@@ -232,11 +240,24 @@ Contributions are welcome! If you'd like to contribute:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## 🚀 Deployment
+
+The application is deployed on **Cloudflare Pages** and is accessible at:
+- **Live URL**: [https://hero-apps-dax.pages.dev/](https://hero-apps-dax.pages.dev/)
+
+### Deployment Notes
+
+- The application uses client-side routing with React Router
+- Cloudflare Pages automatically handles SPA routing and redirects
+- All routes work correctly when accessed directly or after page reload
+- The deployment is configured to serve the application from the `dist` directory after building with Vite
+
 ## 📝 Notes
 
 - The application uses client-side routing, so ensure you're using a web server that supports SPA routing for production deployment
 - App data is static and loaded from JSON files - in a production environment, this would typically be served from an API
 - LocalStorage is browser-specific, so installed apps won't sync across devices or browsers
+- The application is deployed on Cloudflare Pages, which provides excellent performance and global CDN distribution
 
 ## 📄 License
 
