@@ -21,7 +21,7 @@ const NavBar = () => {
                 <ul className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10 text-gray-700 font-medium">
                     <NavLink to={`/`} className="hover:text-[#632EE3] cursor-pointer transition">Home</NavLink>
                     <NavLink to={`/apps`} className="hover:text-[#632EE3] cursor-pointer transition">Apps</NavLink>
-                    <li className="hover:text-[#632EE3] cursor-pointer transition">Installation</li>
+                    <NavLink to={`/installation`} className="hover:text-[#632EE3] cursor-pointer transition">Installation</NavLink>
                 </ul>
 
                 {/* Right Section */}

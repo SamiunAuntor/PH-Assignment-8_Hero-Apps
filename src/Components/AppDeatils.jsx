@@ -46,8 +46,19 @@ const AppDetails = ({ app }) => {
             }
         };
 
+        // Listen localStorage updates for uninstalled apps 
+        const handleStorageChange = () => {
+            const updatedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
+            setInstalled(updatedApps.includes(title));
+        };
+
         window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+        window.addEventListener("storage", handleStorageChange);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+            window.removeEventListener("storage", handleStorageChange);
+        };
     }, [title]);
 
     const handleInstall = () => {
@@ -57,6 +68,9 @@ const AppDetails = ({ app }) => {
         if (!installedApps.includes(title)) {
             installedApps.push(title);
             localStorage.setItem("installedApps", JSON.stringify(installedApps));
+
+            // manually trigger the event for instant update
+            window.dispatchEvent(new Event("storage"));
         }
     };
 
